@@ -1,0 +1,226 @@
+{
+ "format": "MAS",
+ "app": "truss",
+ "appName": "Truss MAS",
+ "studio": "MAS Studio",
+ "kind": "truss2d",
+ "schema": 1,
+ "version": "1.0.1",
+ "savedAt": "2026-10-25T07:11:17.760Z",
+ "model": {
+  "schema": 1,
+  "title": "Warren truss, 4 panels, 20 kN at each bottom joint",
+  "units": "SI",
+  "joints": [
+   {
+    "id": "L0",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "L1",
+    "x": 4,
+    "y": 0
+   },
+   {
+    "id": "L2",
+    "x": 8,
+    "y": 0
+   },
+   {
+    "id": "L3",
+    "x": 12,
+    "y": 0
+   },
+   {
+    "id": "L4",
+    "x": 16,
+    "y": 0
+   },
+   {
+    "id": "U0",
+    "x": 2,
+    "y": 3
+   },
+   {
+    "id": "U1",
+    "x": 6,
+    "y": 3
+   },
+   {
+    "id": "U2",
+    "x": 10,
+    "y": 3
+   },
+   {
+    "id": "U3",
+    "x": 14,
+    "y": 3
+   }
+  ],
+  "members": [
+   {
+    "id": "M1",
+    "i": "L0",
+    "j": "L1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M2",
+    "i": "L1",
+    "j": "L2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M3",
+    "i": "L2",
+    "j": "L3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M4",
+    "i": "L3",
+    "j": "L4",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M5",
+    "i": "U0",
+    "j": "U1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M6",
+    "i": "U1",
+    "j": "U2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M7",
+    "i": "U2",
+    "j": "U3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M8",
+    "i": "L0",
+    "j": "U0",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M9",
+    "i": "U0",
+    "j": "L1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M10",
+    "i": "L1",
+    "j": "U1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M11",
+    "i": "U1",
+    "j": "L2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M12",
+    "i": "L2",
+    "j": "U2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M13",
+    "i": "U2",
+    "j": "L3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M14",
+    "i": "L3",
+    "j": "U3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M15",
+    "i": "U3",
+    "j": "L4",
+    "material": "steel",
+    "section": "s1"
+   }
+  ],
+  "materials": [
+   {
+    "id": "steel",
+    "name": "Steel",
+    "E": 200,
+    "density": 7850,
+    "fy": 250
+   }
+  ],
+  "sections": [
+   {
+    "id": "s1",
+    "name": "A = 1000 mm²",
+    "A": 1000
+   }
+  ],
+  "supports": [
+   {
+    "joint": "L0",
+    "ux": true,
+    "uy": true
+   },
+   {
+    "joint": "L4",
+    "ux": false,
+    "uy": true
+   }
+  ],
+  "cases": [
+   {
+    "id": "L1",
+    "name": "Load case 1"
+   }
+  ],
+  "loads": [
+   {
+    "id": "P1",
+    "caseId": "L1",
+    "joint": "L1",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P2",
+    "caseId": "L1",
+    "joint": "L2",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P3",
+    "caseId": "L1",
+    "joint": "L3",
+    "fx": 0,
+    "fy": -20
+   }
+  ]
+ }
+}

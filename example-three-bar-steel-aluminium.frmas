@@ -1,0 +1,120 @@
+{
+ "format": "MAS",
+ "app": "truss",
+ "appName": "Truss MAS",
+ "studio": "MAS Studio",
+ "kind": "truss2d",
+ "schema": 1,
+ "version": "1.0.1",
+ "savedAt": "2026-10-25T07:11:17.761Z",
+ "model": {
+  "schema": 1,
+  "title": "Three-bar truss: steel centre bar, aluminium side bars, 100 kN",
+  "units": "SI",
+  "joints": [
+   {
+    "id": "A",
+    "x": -1.7320508075688772,
+    "y": 3
+   },
+   {
+    "id": "B",
+    "x": 0,
+    "y": 3
+   },
+   {
+    "id": "C",
+    "x": 1.7320508075688772,
+    "y": 3
+   },
+   {
+    "id": "D",
+    "x": 0,
+    "y": 0
+   }
+  ],
+  "members": [
+   {
+    "id": "AD",
+    "i": "A",
+    "j": "D",
+    "material": "alu",
+    "section": "s2"
+   },
+   {
+    "id": "BD",
+    "i": "B",
+    "j": "D",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "CD",
+    "i": "C",
+    "j": "D",
+    "material": "alu",
+    "section": "s2"
+   }
+  ],
+  "materials": [
+   {
+    "id": "steel",
+    "name": "Steel",
+    "E": 200,
+    "density": 7850,
+    "fy": 250
+   },
+   {
+    "id": "alu",
+    "name": "Aluminium",
+    "E": 70,
+    "density": 2700,
+    "fy": 150
+   }
+  ],
+  "sections": [
+   {
+    "id": "s1",
+    "name": "A = 1000 mm²",
+    "A": 1000
+   },
+   {
+    "id": "s2",
+    "name": "A = 1500 mm²",
+    "A": 1500
+   }
+  ],
+  "supports": [
+   {
+    "joint": "A",
+    "ux": true,
+    "uy": true
+   },
+   {
+    "joint": "B",
+    "ux": true,
+    "uy": true
+   },
+   {
+    "joint": "C",
+    "ux": true,
+    "uy": true
+   }
+  ],
+  "cases": [
+   {
+    "id": "L1",
+    "name": "Load case 1"
+   }
+  ],
+  "loads": [
+   {
+    "id": "P1",
+    "caseId": "L1",
+    "joint": "D",
+    "fx": 0,
+    "fy": -100
+   }
+  ]
+ }
+}

@@ -1,0 +1,297 @@
+{
+ "format": "MAS",
+ "app": "truss",
+ "appName": "Truss MAS",
+ "studio": "MAS Studio",
+ "kind": "truss2d",
+ "schema": 1,
+ "version": "1.0.1",
+ "savedAt": "2026-10-25T07:11:17.759Z",
+ "model": {
+  "schema": 1,
+  "title": "Pratt truss, 6 × 4 m panels, 4 m deep, 20 kN at each bottom joint",
+  "units": "SI",
+  "joints": [
+   {
+    "id": "L0",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "L1",
+    "x": 4,
+    "y": 0
+   },
+   {
+    "id": "L2",
+    "x": 8,
+    "y": 0
+   },
+   {
+    "id": "L3",
+    "x": 12,
+    "y": 0
+   },
+   {
+    "id": "L4",
+    "x": 16,
+    "y": 0
+   },
+   {
+    "id": "L5",
+    "x": 20,
+    "y": 0
+   },
+   {
+    "id": "L6",
+    "x": 24,
+    "y": 0
+   },
+   {
+    "id": "U1",
+    "x": 4,
+    "y": 4
+   },
+   {
+    "id": "U2",
+    "x": 8,
+    "y": 4
+   },
+   {
+    "id": "U3",
+    "x": 12,
+    "y": 4
+   },
+   {
+    "id": "U4",
+    "x": 16,
+    "y": 4
+   },
+   {
+    "id": "U5",
+    "x": 20,
+    "y": 4
+   }
+  ],
+  "members": [
+   {
+    "id": "M1",
+    "i": "L0",
+    "j": "L1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M2",
+    "i": "L1",
+    "j": "L2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M3",
+    "i": "L2",
+    "j": "L3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M4",
+    "i": "L3",
+    "j": "L4",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M5",
+    "i": "L4",
+    "j": "L5",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M6",
+    "i": "L5",
+    "j": "L6",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M7",
+    "i": "U1",
+    "j": "U2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M8",
+    "i": "U2",
+    "j": "U3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M9",
+    "i": "U3",
+    "j": "U4",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M10",
+    "i": "U4",
+    "j": "U5",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M11",
+    "i": "L0",
+    "j": "U1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M12",
+    "i": "U5",
+    "j": "L6",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M13",
+    "i": "L1",
+    "j": "U1",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M14",
+    "i": "L2",
+    "j": "U2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M15",
+    "i": "L3",
+    "j": "U3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M16",
+    "i": "L4",
+    "j": "U4",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M17",
+    "i": "L5",
+    "j": "U5",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M18",
+    "i": "U1",
+    "j": "L2",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M19",
+    "i": "U2",
+    "j": "L3",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M20",
+    "i": "L3",
+    "j": "U4",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "M21",
+    "i": "L4",
+    "j": "U5",
+    "material": "steel",
+    "section": "s1"
+   }
+  ],
+  "materials": [
+   {
+    "id": "steel",
+    "name": "Steel",
+    "E": 200,
+    "density": 7850,
+    "fy": 250
+   }
+  ],
+  "sections": [
+   {
+    "id": "s1",
+    "name": "A = 1000 mm²",
+    "A": 1000
+   }
+  ],
+  "supports": [
+   {
+    "joint": "L0",
+    "ux": true,
+    "uy": true
+   },
+   {
+    "joint": "L6",
+    "ux": false,
+    "uy": true
+   }
+  ],
+  "cases": [
+   {
+    "id": "L1",
+    "name": "Load case 1"
+   }
+  ],
+  "loads": [
+   {
+    "id": "P1",
+    "caseId": "L1",
+    "joint": "L1",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P2",
+    "caseId": "L1",
+    "joint": "L2",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P3",
+    "caseId": "L1",
+    "joint": "L3",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P4",
+    "caseId": "L1",
+    "joint": "L4",
+    "fx": 0,
+    "fy": -20
+   },
+   {
+    "id": "P5",
+    "caseId": "L1",
+    "joint": "L5",
+    "fx": 0,
+    "fy": -20
+   }
+  ]
+ }
+}

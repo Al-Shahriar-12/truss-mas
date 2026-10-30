@@ -1,0 +1,98 @@
+{
+ "format": "MAS",
+ "app": "truss",
+ "appName": "Truss MAS",
+ "studio": "MAS Studio",
+ "kind": "truss2d",
+ "schema": 1,
+ "version": "1.0.1",
+ "savedAt": "2026-10-25T07:11:17.759Z",
+ "model": {
+  "schema": 1,
+  "title": "Triangular truss, 10 kN at the apex",
+  "units": "SI",
+  "joints": [
+   {
+    "id": "A",
+    "x": 0,
+    "y": 0
+   },
+   {
+    "id": "B",
+    "x": 4,
+    "y": 0
+   },
+   {
+    "id": "C",
+    "x": 2,
+    "y": 3
+   }
+  ],
+  "members": [
+   {
+    "id": "AB",
+    "i": "A",
+    "j": "B",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "AC",
+    "i": "A",
+    "j": "C",
+    "material": "steel",
+    "section": "s1"
+   },
+   {
+    "id": "BC",
+    "i": "B",
+    "j": "C",
+    "material": "steel",
+    "section": "s1"
+   }
+  ],
+  "materials": [
+   {
+    "id": "steel",
+    "name": "Steel",
+    "E": 200,
+    "density": 7850,
+    "fy": 250
+   }
+  ],
+  "sections": [
+   {
+    "id": "s1",
+    "name": "A = 1000 mm²",
+    "A": 1000
+   }
+  ],
+  "supports": [
+   {
+    "joint": "A",
+    "ux": true,
+    "uy": true
+   },
+   {
+    "joint": "B",
+    "ux": false,
+    "uy": true
+   }
+  ],
+  "cases": [
+   {
+    "id": "L1",
+    "name": "Load case 1"
+   }
+  ],
+  "loads": [
+   {
+    "id": "P1",
+    "caseId": "L1",
+    "joint": "C",
+    "fx": 0,
+    "fy": -10
+   }
+  ]
+ }
+}
